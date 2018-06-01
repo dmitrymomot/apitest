@@ -19,11 +19,6 @@ func main() {
 	app.Author = "Cloud"
 	app.Email = "cloud@txthinking.com"
 	app.Flags = []cli.Flag{
-		cli.BoolFlag{
-			Name:        "markdown, m",
-			Usage:       "Print markdown document",
-			Destination: &markdown,
-		},
 		cli.Int64Flag{
 			Name:  "delay, d",
 			Usage: "Delay per request, (millisecond)",

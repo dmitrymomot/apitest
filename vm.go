@@ -1,8 +1,9 @@
 package main
 
 import (
+	"frank/function"
+
 	"github.com/robertkrimen/otto"
-	"github.com/txthinking/frank/function"
 )
 
 // VM
@@ -16,6 +17,8 @@ func InitVM() {
 
 // Register builtin functions
 func RegisterFunctions() {
+	function.Fake(VM)
+	function.Rand(VM)
 	function.MD5(VM)
 	function.Must(VM)
 	function.Exit(VM)
